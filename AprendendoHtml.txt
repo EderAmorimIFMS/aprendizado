@@ -1,0 +1,25 @@
+--Estrutura basica.
+<!DOCTYPE html>
+<html lang=“pt-br”>
+<head>
+<meta charset=“utf-8”/>
+<meta content=“width=device-width, initial-scale=1, maximum-scale=1” name=“viewport”>
+<title></title>
+<link href=“estilo.css” rel=“stylesheet”/>
+<script src=“script.js”></script>
+</head>
+<body>
+…
+</body>
+</html>
+
+
+--algumas tags interessantes.
+<details>
+<summary>Saiba mais</summary>
+</details>
+
+<figure>
+imagem
+<figcaption>Detalhe imagem</figcaption>
+</figure>

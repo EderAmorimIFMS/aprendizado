@@ -1,0 +1,97 @@
+podemos nomear class, class="item buttom".
+
+background: linear-gradient(99deg, cor, cor...); //troca de uma cor para outra tornando um sombreamento
+
+transform: rotate(99deg); //gira a imagem, textos, etc...
+--melhorar imagens
+filter(
+blur(99px) //desfocamento uma imagem, textos, etc...(10px é o bastante).
+grayscale(99%) //acinzenta uma imagem, 100% acinzenta ao maximo.
+opacity(99%) //torna uma imagem transparente sendo que 0 deixa completamente invisivel
+brightness(999%) //altera o brilho, 100% é o normal.
+saturate(999%) //torna as cores mais vividas, quanto menor menos colorida a imagem.
+contrast(999%) //ajusta a diferença entre as partes claras e escuras de uma imagem, quanto menor mais cinza fica.
+obs: efeitos exagerados, pode de 100% acima.
+);
+float: rigth ou left; //para textos, coloca ao lado da imagem.
+clear: right ou left; //para textos, fica abaixo da imagem.
+
+
+--Empurrar ou mover elementos.
+position: relative ou absolute; //altera a tag em relação a sua posição original.
+z-index: 0 //somente absolute, faz o elemento com maior indice se sobrepor á outros elementos, 0 é o padrão de todss as tags, -1 é menor, assim por diante.
+top: 99px; //empurra ou move a tag em relação ao topo.
+bottom: 99px; //empurra ou moveca tag em relação ao fundo.
+left: 99px; //empurra ou move a tag em relação a esquerda.
+right: 99px; //empurra ou move a tag em relação a direita.
+obs: diferença entre eles, relative fica no seu fluxo original, enquanto absolute pode se sobrepor aos outros elementos.
+
+
+--alinhamentos
+display: inline; //mesma linha, não altera o tamanho(padrão: a, i, b).
+display: block; //uma embaixo do outro, pode alterar tamanho(padrao: div, p, h1...).
+display: inline-block; //na mesma linha, e passa pra baixo quando nao cabe na mesma linha(padrao: buttom, img).
+
+display: flex; // Adapita elementos filhos dentro do container o pai, em uma unica linha.
+ --propriedades flex.
+flex-direction: row ou column; // row para linhas da esquerda para direita e column para colunas de cima para baixo.
+ou flex-direction: row-reverse ou column-reverse; // mesmo que row em ordem reversa da direita para esquerda e column mesma coisa tambem só que os elementos ficam de baixo para cima.
+--mais para links, e itens pequenos
+justify-content: xxxxxxx-xxxxxx; //posicona os itens dentro do container, de acordo com os valores abaixo.
+flex-start; //posição padrão no display.
+flex-end; //posição contraria, mas não altera a ordem.
+center; //posiciona os itens no centro.
+space-between; //deixa um espaço apens entre os itens.
+space-around; //deixa bem espaçado, entre os itens e o container.
+
+--mais para divs.
+align-items: xxxxxxx; //alinha itens ao longo do eixo cruzado, e com o tamanho do item, de acordo com os valores abaixo.
+align-content: xxxxx-xxxxx; //controla o espaço ao redor das linhas agrupadas de itens. eixo crusado.
+--valores para A-items e A-contente.
+stretch; //é o padrão, faz com que os itens preencham todo eixo transversal.
+flex-start; //alinha os itens no inicio do eixo cruzado.
+flex-end //alinha os itens no final do eixo cruzado.
+center; //alinha os itens no centro.
+
+flex-wrap: wrap, nowrap(valor padrão) e wrap-reverse(ordem reversa); //se o item não couber na mesma linha ele passa para linha abaixo. coluno ou linha.
+
+--funciona apenas nos filhos.
+flex-basis: 99px ou 99%, ("auto" é padrão); //altera o tamanho dos itens no eixo principal.
+flex-grow: 0(valor padrão), 1, 2, ...; //altera o tamanho de apenas 1 item no eixo principal.
+flex-shrink: 0, 1(valor padrão), 2, ...; //redus o tamanho dos itens flex.
+flex: 0(grow) 1(shrink) auto(basics); //é os tres juntos, nessa ordem.
+--OBS: nomeie o pai como container, os filhos como itens, por padrão mesmo.
+
+
+display: grid; //adapita itens dentro do container em 2D. Bidimensional.
+grid-template-columns: 100px 100px 50px, 2fr 1fr 2fr, auto auto auto ou repeat(quantos itens, tamanho); //define as colunas.
+grid-template-row: 100px 100px 50px, 2fr 1fr 2fr, auto auto auto ou repeat(3, 1fr); //define as linhas.
+grid-template: 50px 50px 50px(linhas)/ 80px 80px 80px(colunas); //defini linhas e colunas ao mesmo tempo.
+row-gap: 99px; //dá um espaço entre as linhas dos itens grid, space between dá vida.
+columm-gap: 88px; //dá um espaço entre as colunas dos itens grid.
+gap: 99px(row) 88px(column); //espaça as limas e as colunas ao mesmo tempo.
+justify-items: xxxxxx; //alinhar os itens no EIXO DA LINHA(X).
+align-items: xxxxxx; //alinhar os itens no EIXO DA COLUNA(Y).
+--valores para justify e align.
+stretch; //fais com que os itens preencham todo espaço vazios, deacordo com o eixo principal.
+start; //alinha os itens no inicio.
+end; //alinha os itens no final.
+center; //centraliza.
+
+--dentro do grid itens.
+grid-column: span 2;use o span //define quantas colunas um item irá abrangir.
+grid-row: span 2;use o span //define quantos linhas um item irá abrangir.
+grid-area: header; //nomeia o item filho, para usa-lo no template-area para estruturar uma pagina.
+
+--(no container). 
+grid-template-areas: //estruturação.
+coluna coluna coluna
+"header header header" linha
+"slide slide main"     linha
+"slide slide main"     linha
+"footer footer footer" linha //layout pagina.
+--obs: nomeie o container de "grid-container" e os itens de "grid-item", por padrão.
+
+@media (condição do tamanho da tela){
+  regras css para estruturar a pagina
+}

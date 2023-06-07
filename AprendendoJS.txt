@@ -1,0 +1,153 @@
+--alguns operadores logicos.
+||  ou, pelomenos um correto.
+&&  e, todos devem estar corretos.
+=== igualdade.
+!==  diferença.
+> maior.
+< menor.
+>= maior e igual.
+<= menor e igual 
+
+--conditionals.
+obs: pode colocar quantos else if for necessarios.
+->estrutura.
+if(condicões){
+bloco de codigo;
+
+}else if(condicões){
+bloco de codigo;
+
+}else{
+bloco de codigo;
+};
+
+
+--auto atribuição.
++= adiciona um valor, é um atalho.
+-= subtrai um valor, é um atalho.
+Variavel++ adiciona +1 a variavel.
+Variavel-- subtrai -1 a variavel.
+
+
+--Loop, for e while.
+->Estrutura.
+-Loop While.
+while(condição true){
+    bloco de codigo;
+
+} 
+
+-Loop For
+ex: i éo contador, ou indice.
+for(let i = 0; condicão true; i++){
+    bloco de código:
+
+}
+-obs: a condição do loop tem que ser exatamente verdadeira para o bloco de codigo ser executado. 
+
+
+--Arrays.
+nomeArray.push("valor"); //adciona um valor no ultimo indice dentro do array.
+nomeArray.pop(); //remove o ultimo item dentro do array.
+nomeArray.lenght; //retorna o ultimo indice do array.
+
+--nomeArray.map(
+    (element, index) => {}
+); //quando chamado em um array, nos permite modificar cada valor e armazená-los em um novo array de acordo com a função entre parenteses.
+
+--nomeArray.filter(
+    (element, index) => {}
+); //cria um novo array com os valores que satisfazem a condição dentro do bloco de codigo da função.
+
+--nomeArray.reduce(
+    (resultado da iteração anterior(prevVal), valor da iteração atual(currVal), index) => {prevVal + currVal}
+); //Pode combinar valores array em um unico valor de acordo com a função.
+
+
+--Funçoes.
+function Name(parametro1, parametro2, ...){
+  bloco de codigo;
+  return VALOR FINAL.
+  
+}
+Name(parametro1, parametro2, ...);
+
+
+--Objetos.
+const nomeObjeto = {
+  name: "Dino",
+  subName: "Silva",
+  lastName: "Sauro",
+  filhos: ["Gina", "Wesley", "Gago"],
+  mostrarFamilia: function(){
+    return this.filhos;
+  }
+}
+-pegando entradas no objeto.
+nomeObjeto.name
+nomeObjeto.mostrarFamilia()
+
+
+--ES6, ECMAScript 6.
+-Arrow functions
+const nomeVariavel = (parametros) => {}
+nomeVariavel(parametros)
+
+-ex: const greetings = (name) => {
+ return `Bonjour ${name}!`;
+};
+console.log(greetings`Jane`);
+
+-literais strings.
+entre as apas backtip ``, espressoes. ${}
+let old = `Superman`;
+let latest = `Startrek`;
+let movies = `${old}, ${latest}`;
+console.log(movies);
+
+
+--Algumas funçoes para reutlizar.
+-const grades = [91, 66, 77, 84, 66];
+ const search = 66;
+ function searchGrade(grades, search) {
+   for (let i = 0; i < grades
+  .length; i++) {
+  if (grades[i] === search) {
+   console.log("The grade exists!");
+   break;
+  }
+ }
+}
+
+-const one = [91, 66, 77, 84, 68];
+const two = [81, 66, 78, 88, 98];
+function compareArrays(one, two) {
+ for (let i = 0; i < one.length; i++) {
+  if (one[i] === two[i]) {
+   console.log("Common element:", one[
+    i]);
+  }
+ }
+ return false;
+}
+
+-const prices = [99, 129, 149];
+const discounts = [0.1, 0.2, 0.25];
+function getValues(prices, discounts) {
+ const values = [];
+ for (let i = 0; i < prices
+  .length; i++) {
+  values[i] = prices[i] * discounts[i];
+ }
+ console.log(values);
+}
+
+-const fahrenheit = [72, 68, 70, 74, 77,
+ 75, 79
+];
+const celsius = [];
+for (const element of fahrenheit) {
+ let c = (element - 32) * (5 / 9);
+ celsius.push(c);
+}
+console.log(celsius);

@@ -1,0 +1,25 @@
+----Antes de conhecermos o codigo---
+--oque é JSX?
+(JavaScrip XML), é uma sintaxe de marcação que combina elementos e logica da interface do usuario(UI), basicamente ele diz ao navegador oque e como renderizar.
+o JSX nos permite gerar tags HTML, podemos sim adicionar codigo semelhante ao html mas não confunda JSX com JS ou HTML.ex:
+var header = ( <h1> Hello word! </h1> );
+
+--oque são componentes?
+
+
+
+-----Linhas de codigo principais.-----
+//permite acesso aos varios recursos do React.
+import React form "react";
+//permite renderizar o conteúdo na web.
+import ReactDOM from "react-dom";
+
+//com os dois acima importados, chame a função necessaria para renderizar conteúdo na pagina Web. recebe dois parametros.
+ReactDOM.render(
+
+//1° éo conteudo que queremos renderizar(componentes da pagina ou bloco de código).ex:
+<div> Isto é uma div </div>
+//2° é onde queremos renderizar em um documento HTML.ex: tem uma div com id root em um arquivo html.
+document.getElementById("root");
+
+);

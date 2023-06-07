@@ -1,0 +1,126 @@
+-->in Html:
+nomeie com um ID um elemento que deseje interagir.
+<html>
+<main>
+   <h1 id="title">Title</h1>
+   <p class="paragraph"></p>
+   <input type="text" id="input">
+   <button onclick="mudarTitle()">Change</button>
+</main>
+</html>
+
+
+-->in Js:
+--para pegar o elemento h1 do html use:
+innerHTML// coloque se for um texto, para fazer alteracoes ou console.
+
+--armazene em uma variavel:
+h1-title = document.getElementById("title");
+
+--veja no console:
+console.log(h1-title.innerHTML);
+
+--aqui renomeie o titulo:
+document.getElementById("title").innerHTML = "New Title"; 
+--ou:
+h1-title.innerHTML = "New title";
+
+--crie um elemento e adicione um texto:
+let paragraph = document.createElement("p");
+pragraph.innerHTML= "Isso é um paragrafo";
+ou
+pragraph.textContent= "Isso é um paragrafo";
+  
+--insira o p(elemento filho) no html usando o main(elemento pai):
+const main = document.getElementById("main");
+main.appendChild(paragraph);
+
+--remova o paragrafo usando, 1° pegue o pai, e coloque o filho como parametro:
+main.removeChild(paragraph);
+
+--Usando imagens também:
+const elemento = document.createElement("img");
+elemento.src = "imagem.png(caminho da img)";
+
+--pegando entradas de inputs:
+Não esqueça de colocar a entrada.value. ex abaixo.
+const input = document.getElementById("input").value;
+
+--Eventos: onclick, 
+-evento onclick: fazer evento com um click.
+-ondbclick: fazer eventos com double click.
+-onscroll: fazer eventos quando o usuario rola ná pagina web
+-onchange: update, fazer "mudanças" em um evento quando um campo de entrada(inputs) altera seu valor. aciona depois da ação ser feita.
+-oninput: acionar o evento sempre que a entrada(inputs) de um elemento for alterada.
+
+--elemento.addEventListener("evento", manipulador(função));
+atribui um evento ao elemento.
+elemento.removeEventListener("evento", manipulador(função));
+remove o evento do elemento.
+
+--querySelector() e querySelectorAll():
+--obs: diferença, no All busca varios elementos ao mesmo tempo assim fazendo um array com os elementos buscados, jà o basico busca apenas um elemento especifico, somente o primeiro elemento de pesquisa.
+use document.querySelector("tag" ou "#id" ou ".class") tbm dá pra buscar mais de um atributo do elemento q voce quer buscar, ex tag.class.class.
+use document.querySelectorAll("tag.class", "tag#id") virgula sgnf ou.
+const body = document.querySelector("body");
+const h1 = document.querySelector("#h1");
+  h1.innerHTML = "New title";
+const p = document.querySelector(".p");
+p.textContent = "I'm a paragraph small";
+
+
+--getElementsByTagName():
+Obtem a coleção de elementos do mesmo tipo de tag.
+const TodosElh1 = document.getElementsByTagName("h1");
+const 1h1 = TodosElh1[0];
+const 2h1 = TodosElh1[1];
+
+--getElementsByClassName():
+Obtem uma coleção que contem elementos especificos de uma classe.
+const TodosElclassTitle = document.getElementsByClassName("title");
+const 1classTitle = TodosElclassTitle[0];
+const 2classTitle = TodosElclassTitle[1];
+
+--elemento.classList:
+const h1 = document.querySelector("p.paragraph");
+h1.classList.add("bold" --adiciona mais tbm); adiciona o negrito ao paragrafo.
+h1.classList.remove("bold"); remove o negrito do paragrafo.
+h1.classList.toggle(bold); adiciona e remove o negrito do paragrafo, use com um botão 1 click add, 2 click remove.
+
+--CSS no JS.
+atribuir estilos com palavras chaves grandes use Camel Case, ex: bg-color-> bgColor, border-radius-> borderRadius.
+const main = document.querySelector("main");
+main.style.backgroundColor = "teal";
+
+--elemento.getAttribute():
+mostra a fonte, o atributo do elemento.
+const img = document.querySelector("img");
+const imgLink = img.getAttribute("src");
+
+--mudando atributo type do input:
+const input = document.querySelector("input");
+input.innerText = paragraph;
+input.type = "password";
+
+--elemento.setAttribute("qual atributo", "valor"): obs igual acima, acho melhor.
+input.setAttribute("type", "password");
+
+
+--objetos.
+const car = {
+ combustivel: gasolina,
+ marca: ford,
+ som: function(){ return "Pom Pom"}
+};
+
+car.criarMetodo() = function(){
+   return "Vrum Vrum"
+}
+
+-herdar atributos e metodos do objeto.
+const carCopia = Objeto.create(car);
+
+----HTML, VISUALIZANDO uma Arvore. hierarquia de tags.----
+Oque é DOM? 
+É uma interface JavaScript que permite acessar elementos HTML com base em sua posição na arvore do documento html.
+

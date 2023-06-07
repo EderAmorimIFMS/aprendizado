@@ -1,1 +1,5 @@
-# anota-o
+CSS 
+HTML
+JavaScript
+React
+GitHub

@@ -5,13 +5,10 @@ git init
 git config user.name "EderAmorIM"
 git config user.email "eder.amorim@estudante.ifms.edu.br"
 
-git remote add origin LINKdoRepositorioCriado
+git remote add origin nomeDoRepositorio
 git add .
 git status -- ver o status de cada file
 
 git commit -m "comentario" -- salva no git
 git push origin main 
  
-----------------------------------------------------------------
-
-git clone

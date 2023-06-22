@@ -14,4 +14,5 @@ git status -- ver o status de cada file
 git commit -m "comentario" -- salva no git
 git checkout -b main  -- muda de master para main ou vice versa
 git push origin main  -- salva as files enviada no git
+git log --oneline -- ver todos os commits
  

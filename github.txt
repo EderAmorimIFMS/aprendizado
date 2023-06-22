@@ -1,14 +1,17 @@
 senha - Git10341433101
 token - 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
 
+
 git init 
 git config user.name "EderAmorIM"
 git config user.email "eder.amorim@estudante.ifms.edu.br"
 
-git remote add origin nomeDoRepositorio
-git add .
+git remote add origin Link do repositorio  -- conecta ao repositorio do git
+git pull origin main -- baixa as file que estão no git
+git add .  -- envia as file para o git
 git status -- ver o status de cada file
 
 git commit -m "comentario" -- salva no git
-git push origin main 
+git checkout -b main  -- muda de master para main ou vice versa
+git push origin main  -- salva as files enviada no git
  

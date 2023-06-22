@@ -3,7 +3,7 @@ token - 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
 
 
 git init 
-git config user.name "EderAmorIM"
+git config user.name "EderAmorimIFMS"
 git config user.email "eder.amorim@estudante.ifms.edu.br"
 
 git remote add origin Link do repositorio  -- conecta ao repositorio do git

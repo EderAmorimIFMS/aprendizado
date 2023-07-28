@@ -92,6 +92,6 @@ coluna coluna coluna
 "footer footer footer" linha //layout pagina.
 --obs: nomeie o container de "grid-container" e os itens de "grid-item", por padrão.
 
-@media (condição do tamanho da tela){
+@media (condição do tamanho da tela(ex: max-widht: 999px)){
   regras css para estruturar a pagina
 }
